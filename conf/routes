@@ -1,0 +1,28 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
+GET     /description/assets/*file   controllers.Assets.at(path="/public", file)
+
+GET      /                           controllers.AccountMain.getLogin()
+POST     /login                      controllers.AccountMain.login()
+GET      /logout                     controllers.AccountMain.logout()
+GET      /recover                    controllers.AccountRecovery.getRecover()
+POST     /recoverPassword            controllers.AccountRecovery.recover()
+GET      /description/:id            controllers.Item.description(id: String)
+GET      /myTags                     controllers.Item.myTags()
+POST     /myTags                     controllers.Item.myTags()
+GET      /favorites                  controllers.Item.favorites()
+POST     /favorites                  controllers.Item.favorites()
+GET      /coupons                    controllers.Item.coupons()
+POST     /coupons                    controllers.Item.coupons()
+GET      /accountSettings            controllers.AccountMain.getAccountSettings()
+POST     /acctSettings               controllers.AccountMain.accountSettings()
+POST     /submitAction               controllers.Item.doAction()
+POST     /submitAction               controllers.Item.doAction()
+POST     /addItem                    controllers.Item.addItem()
+GET      /contact                    controllers.Main.getContact()
+GET      /intro                      controllers.Main.getIntro()
+GET      /register                   controllers.Main.getRegister()
+POST     /reg                        controllers.AccountMain.reg()

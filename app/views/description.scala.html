@@ -1,0 +1,67 @@
+@(map: Map[String, String])
+
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../assets/stylesheets/header.css">
+    <link rel="stylesheet" type="text/css" href="../assets/stylesheets/stylesheet.css">
+    <style type="text/css">
+
+    tr:hover {
+        background:#ebebeb; 
+    }
+    
+    </style>
+    <title>Product Description</title>
+    <link rel="shortcut icon" type="image/png" href="../assets/images/favicon.png">
+</head>
+
+<body bgcolor=f8f8f8>
+@header("")
+
+    <center>
+        <div align=left id="descriptionName">
+            <B>@map.get("Name")</B>
+        </div>
+        <table>
+            <tr>
+                <td bgcolor=f8f8f8>
+                    <div style="width:500px;float:left">
+                        <center><img src="../assets/images/item_images/product_large/@(map.get("_id")).PNG"></center>
+                    </div>
+                    <div align=left style="width:165px;float:left;padding-top:60">
+                        <div style="font-size:28px;font-weight: 900;font-family:Helvetica">
+                            $@map.get("Price")
+                        </div>
+                        
+                        <br><br><br>
+                        
+                        <span style="font-size:16px;font-family:Lucida Sans Unicode">Item was tapped at:</span><br>
+                        <div style="font-size:24px;font-weight: 900;font-family:Lucida Sans Unicode">
+                            @map.get("Store Name")
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        <br><br>
+
+        <div align=left id="productSummary">
+            @map.get("Summary")
+        </div>
+        <table border=1 bordercolor="ffffff" cellpadding=11  width=700px style="clear:both;border-spacing:0px;font-family:Helvetica" rules=all frame=void bgcolor=white>
+            @for((key, value) <- map){
+                @if(!key.equals("Name") && !key.equals("_id") && !key.equals("Store Name") && !key.equals("Price") && !key.equals("Summary")) {
+                    <tr>
+                        <td width=165 bgcolor=81b5eb>
+                            <b><font color=292929>@key<font></b>
+                        </td>
+                        <td>@value</td>
+                    </tr>
+                }
+            }
+        </table>
+    </center>
+
+</body>
+</html>

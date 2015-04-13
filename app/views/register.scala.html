@@ -1,0 +1,42 @@
+@(errorMsg : String)(successMsg : String)
+
+<html>
+<head>
+    <link rel="shortcut icon" type="image/png" href="../assets/images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="../assets/stylesheets/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="../assets/stylesheets/login.css">
+    <title>Create An Account</title>
+</head>
+
+<body bgcolor=f8f8f8>
+
+     @if(successMsg) {
+		<span id="regSuccess">@successMsg <a href="../" class="convLink">Click here to Sign In.</a></span>
+	} else {
+	    <form action="/reg" method="POST">
+	    	<div id="regLayout">
+	    		<a href="../"><img id="smallLogo" src="../assets/images/logo.png"></a>
+	    		<div id="regHeader">Create An Account</div>
+       			<div class="regPadding bold" id="registrationNote">
+			        <img src="../assets/images/optionNoteIcon.png" id="optionIcon">
+                    Update: You can access Easy Compare using the account <a href="/intro" class="convLink">provided here.</a>
+                </div>
+                @if(errorMsg) {
+                    <div id="error">@errorMsg</div>
+                }
+			    <div class="regPadding">
+            	    <input name="email" placeholder="Email" autocomplete="off" class="inputField" type="text">
+                </div>                        
+                <div class="regPadding">
+                	<input name="password" placeholder="Password" class="inputField" type="password" ><br>
+                </div>                        
+                <div class="regPadding">
+	                <input name="repassword" placeholder="Re-enter Password" class="inputField" type="password"><br>
+                </div>
+                <input type="submit" value="Create Account" id="savePassword">
+    		</div>
+    	</form>
+	}
+
+</body>
+</html>

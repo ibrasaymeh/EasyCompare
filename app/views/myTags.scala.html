@@ -1,0 +1,48 @@
+@(list: ArrayList[HashMap[String, String]])
+
+<html>
+<head>
+    <title>My Tags</title>
+    <link rel="shortcut icon" type="image/png" href="../assets/images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="../assets/stylesheets/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="../assets/stylesheets/list.css">
+    <link rel="stylesheet" type="text/css" href="../assets/stylesheets/header.css">
+    <link rel="stylesheet" type="text/css" href="../assets/stylesheets/tooltipster.css">
+    <link rel="stylesheet" type="text/css" href="../assets/stylesheets/tooltipster-light.css">
+<style type="text/css">
+body {
+text-align: center;
+}
+</style>
+</head>
+
+<body bgcolor=f8f8f8 onload="clearState()">
+@header("tags")
+
+<div style="display: inline-block;">
+        @if(list.isEmpty) {
+            <div id="emptyList">
+                To add a Tag, use the Add Item feature in the mobile app.
+            </div>
+        } else {
+            <form action="/submitAction" method="POST">
+            
+            @action("tags")            
+            
+            <div id="headerPadder"></div>
+    
+            @for(i <- 0 until list.size){
+                @productSummary(i,list.get(i))
+            }
+            
+            </form>
+        }
+</div>
+
+    <script src="assets/javascripts/jquery-2.0.3.min.js" ></script>
+    <script src="assets/javascripts/jquery.tooltipster.min.js" ></script>
+    <script src="assets/javascripts/myTags.js" ></script>
+    <script src="assets/javascripts/toggle.js" ></script>
+
+</body>
+</html>

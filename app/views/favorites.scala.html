@@ -1,0 +1,45 @@
+@(list: ArrayList[HashMap[String, String]])
+
+<html>
+<head>
+    <title>Favorites</title>
+    <link rel="shortcut icon" type="image/png" href="../assets/images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="../assets/stylesheets/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="../assets/stylesheets/list.css">
+    <link rel="stylesheet" type="text/css" href="../assets/stylesheets/header.css">
+<style type="text/css">
+body {
+text-align: center;
+}
+</style>
+</head>
+
+<body bgcolor=f8f8f8 onload="clearState()">
+@header("favs")
+
+<div style="display: inline-block;">
+        @if(list.isEmpty) {
+            <div id="emptyList">
+                To add a Favorite, select the Add to Favorites option in the My Tags page.
+            </div>
+        } else {    
+            <form action="/submitAction" method="POST">
+            
+            @action("favs")
+            
+            <div id="headerPadder"></div>
+    
+            @for(i <- 0 until list.size){
+                @productSummary(i,list.get(i))
+            }
+    
+            </form>
+        }
+</div>
+    
+    <script src="assets/javascripts/jquery-2.0.3.min.js" ></script>
+    <script src="assets/javascripts/favorites.js" ></script>
+    <script src="assets/javascripts/toggle.js" ></script>
+
+</body>
+</html>

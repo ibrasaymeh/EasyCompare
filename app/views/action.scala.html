@@ -1,0 +1,41 @@
+@(message: String)
+
+    <div id="actionDiv">
+    
+        <input type="button" onClick="toggle()" id="actionButtonSelect" value="Select All">
+
+        @if(message.equals("tags")) {
+        <span id="optionSpacer">
+            <span id="optionNote">
+                <img src="../assets/images/optionNoteIcon.png" id="optionNoteImg">
+                Select a checkbox to enable these options
+            </span>
+        </span>
+        }
+
+		<span style="float:right">
+			                    
+	        @if(!message.equals("coupon")) {
+	            <input type="submit" name="submit" value="Compare"  id="actionButtonCompare" disabled>&nbsp;
+	        }
+	        
+	        @if(message.equals("tags")) {
+	            <input type="submit" name="submit" value="Add to Favorites" id="actionButtonATF"  disabled>&nbsp;
+	        }
+	        
+	        @if(message.equals("tags")) {
+	            <input type="submit" name="submit" value="Delete"  id="actionButtonDelete" disabled>
+	        }
+	        
+	        @if(message.equals("favs")) {
+	            <input type="submit" name="submit" value="Remove from Favorites" id="actionButtonRFF"  disabled>
+	        }
+	        
+	        @if(message.equals("coupon")) {
+	            <input type="submit" name="submit" value="Delete Coupon" id="actionButtonDC"  disabled>
+	        }
+	        
+        </span>
+            
+    </div>
+    

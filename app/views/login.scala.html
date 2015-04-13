@@ -1,0 +1,65 @@
+@(message: String)
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Easy Compare</title>
+    <link rel="shortcut icon" type="image/png" href="../assets/images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="../assets/stylesheets/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="../assets/stylesheets/login.css">
+
+
+</head>
+
+<body>
+    
+<div class="center" id="headerMsg">
+    @message
+</div>                
+<form action="/login" method="POST">
+    <div id="headerLayout">
+		<div class="center" id="header">
+        	<a href="/" id="logo"><img src="../assets/images/logo.png" width="339px"></a>
+            <span style="float: right" id='basic-modal'>
+	            <input style="width: 200px;" name="email" autofocus placeholder="Your Email" autocomplete="off" class="inputField" type="text">
+        	    <input style="width: 200px;" placeholder="Password" name="password" class="inputField" type="password">
+            	<input type="submit" value="Sign In" id="loginSubmit">
+                <a href="#" class='basic convLink' id="forgotPwLink">Forgot your password?</a>
+            </span>
+       </div>
+   </div>
+</form>
+               
+<div class="center" id="background">
+	<div id="ctaLayout"></div>
+	<div id="cta">Compare products, coupons, and more
+        <form action="/register">
+	        <input id="register" type="submit" value="Create an account" >
+	    </form>
+	</div>
+</div>
+<div id="footerLayout">
+    <div class="center" id="footer">
+        <span style="float: left;">
+	        <a href="/intro" class="convLink bold">Getting Started</a>
+        </span>
+        
+   		<img id="footerArrow" src="../assets/images/arrow.gif">
+        
+		<span style="float: right;">
+			<a href="/contact" class="convLink" target="_blank">Contact Me</a>
+			&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Ibrahim Saymeh © 2015
+		</span>
+	</div>
+</div>
+
+<div id="basic-modal-content">
+    <iframe frameborder=0 id="iframe" src="/recover">Your browser does not support iframes</iframe>
+</div>
+        
+    <script src="assets/javascripts/jquery-2.0.3.min.js" ></script>
+    <script src="assets/javascripts/modal 1.js" ></script>
+    <script src="assets/javascripts/modal 2.js" ></script>
+    
+</body>
+</html>

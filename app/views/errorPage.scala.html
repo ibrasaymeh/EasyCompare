@@ -1,0 +1,20 @@
+@(message : String)
+
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../assets/stylesheets/header.css">
+    <link rel="stylesheet" type="text/css" href="../assets/stylesheets/stylesheet.css">
+    <title>Error</title>
+    <link rel="shortcut icon" type="image/png" href="../assets/images/favicon.png">
+</head>
+
+<body bgcolor=f8f8f8>
+@header("")
+    
+<div class="center" id="errorLayout">
+	<img id="errorImg" src="../assets/images/stop.png">
+    <span id="error">@message</span>
+</div>
+
+</body>
+</html>

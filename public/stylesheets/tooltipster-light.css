@@ -1,0 +1,11 @@
+.tooltipster-light {
+	border-radius: 5px; 
+	border: 4px solid #0841ff;
+	background: #ffffff;
+	color: #000000;
+}
+.tooltipster-light .tooltipster-content {
+    font-family:Helvetica;
+    line-height: 20px;
+    padding: 10px 5px;
+}

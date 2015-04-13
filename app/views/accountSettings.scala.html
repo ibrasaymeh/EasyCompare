@@ -1,0 +1,81 @@
+@(email : String)(errorMsg : String)(successMsg : String)
+
+<html>
+<head>
+    <link rel="shortcut icon" type="image/png" href="../assets/images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="../assets/stylesheets/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="../assets/stylesheets/header.css">
+    <title>Settings</title>
+</head>
+
+<body bgcolor=f8f8f8>
+
+    @header("sett")
+    <center>
+    <form action="/acctSettings" method="POST">
+    @if(errorMsg || successMsg) {
+        <table style="padding-top:50;width:600px">
+            <tr>
+                <td>
+                    <center>
+                    @if(errorMsg) {
+                        <div class="bold" style="font-size:20px;color:red">@errorMsg</div>
+                    }
+                    @if(successMsg) {
+                        <div class="bold" style="font-size:20px">@successMsg</div>
+                    }
+                    </center>
+                </td>
+            </tr>
+        </table>
+    }
+    
+    @if(!successMsg) {
+        <table border=0 style="padding-top:50;width:490px">
+            <tr>
+                <td width=170 align=right>
+                    <div style="font-size:19px;cursor:default;  font-weight: bold;">Email&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                </td>
+                <td>
+                    <div style="font-size:19px;cursor:default">&nbsp;@email</div>
+                </td>
+            </tr>
+        </table>
+    
+        <br><br>
+    
+        <table border=0 style="width:490px">
+            <tr>
+                <td width=170 align=right>
+                    <div style="font-size:19px;cursor:default;  font-weight: bold;">Change Password&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                </td>
+                <td>
+                    <input name="password" placeholder="New Password" class="inputField" type="password">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <input name="repassword" placeholder="Re-enter New Password" class="inputField" type="password">
+                </td>
+            </tr>
+        </table>
+
+        <br>
+        
+        <table border=0>
+            <tr>
+                <td>
+                    <div style="padding-right:80px"><img src="../assets/images/line fade.png"></div>
+                    <div style="padding-top:15px;padding-left:224px">
+                        <input type="submit" value="Save Changes" id="savePassword">
+                    </div>
+                </td>
+            </tr>
+        </table>
+    }
+    </form>
+    </center>
+</body>
+</html>

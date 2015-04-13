@@ -1,0 +1,45 @@
+@(message: String)
+
+<div align=center id="initialDiv">
+    
+    @if(message.equals("tags")) {
+        <a class="header" id="headerHL" href="/myTags">
+    } else {        
+		<a class="header" href="/myTags">
+    }
+    <span class="largeEntypo-list"></span>&nbsp;&nbsp;My Tags</a>
+
+    <span class="headerPad"/>
+    
+    @if(message.equals("favs")) {
+        <a class="header" id="headerHL" href="/favorites">
+    } else {        
+	    <a class="header" href="/favorites">
+	}
+    <span class="entypo-star"></span>&nbsp;Favorites</a>
+
+    <span class="headerPad"/>
+
+    @if(message.equals("coupon")) {
+        <a class="header" id="headerHL" href="/coupons">
+    } else {        
+        <a class="header" href="/coupons">
+    }
+    <span class="entypo-tag"></span>&nbsp;Coupons</a>
+
+    <span class="headerPad"/>
+
+    @if(message.equals("sett")) {
+        <a class="header" id="headerHL" href="/accountSettings">
+    } else {
+	    <a class="header" href="/accountSettings">
+    }            
+    <span class="entypo-cog"></span>&nbsp;Settings</a>
+
+    <span class="headerPad"/>
+
+    <a class="header" href="/logout">
+        <span class="entypo-logout"></span>&nbsp;Sign Out
+    </a>
+
+</div><br><br>

@@ -1,0 +1,219 @@
+.inputField {
+    padding: 8px 10px 8px;
+    font-size: 17px;
+    border-radius: 5px;
+}
+
+#loginSubmit {
+    padding: 8px 25px 8px;
+    font-size: 18px;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #4294e7;
+    width: 110px;
+    vertical-align:top
+}
+
+#recoverPassword {
+    padding: 8px 18px 8px;
+    font-size: 18px;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #3399FF;
+}
+
+#actionDiv {
+    width:863px;
+    top: 50px;
+    height:43px;
+    position: fixed;
+    background-color:#f8f8f8;
+    left: 0;
+    right: 0;
+    margin:0 auto;
+    padding-top:7px;
+    z-index: 4;
+}
+
+#optionNote {
+    font-size: 17px;
+    font-family:Helvetica;
+    color:#0841ff;
+    cursor: default;
+	top: 3px;
+	position: relative;
+	font-weight: bold;
+}
+
+#optionNoteImg {
+	position:relative;
+	top:3px;
+	width:20px
+}
+
+#registrationNote {
+    font-size: 17px;
+    font-family:Helvetica;
+    color:#0841ff;
+    height:40px;
+    color:#0841ff
+}
+
+#optionIcon {
+	width:20px;
+	vertical-align: text-bottom
+}
+
+#savePassword {
+    padding: 8px 15px 8px;
+    font-size: 18px;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #3399FF;
+}
+
+#productName {
+    width:490px;
+    font-size:25px;
+	text-align: left;
+	position: relative;
+	left: 10;
+	vertical-align: middle;
+    display: inline-block;
+}
+
+#productPrice {
+    width:170px;
+    font-size:25px;
+	text-align: right;
+	position: relative;
+	right: 20px;
+	vertical-align: middle;
+    display: inline-block;
+}
+
+#couponDetails {
+    width:490px;
+    display: inline-block;
+	text-align: left;
+	position: relative;
+	left: 10;
+	vertical-align: middle;
+}
+
+#couponExpire {
+    width:170px;
+    font-size:25px;
+    display: inline-block;
+	text-align: right;
+	position: relative;
+	right: 20px;
+	vertical-align: middle;
+}
+
+#error {
+    color:red;
+    font-size:20px;
+	font-weight: bold;
+	height: 35px;
+}
+
+#errorImg {
+	width:60px;
+	vertical-align: middle;
+	padding-right: 15px
+}
+
+#descriptionName {
+    clear:both;
+    font-size:28px;
+    width:700px;
+    padding-top:30;
+    font-family:Helvetica;
+}
+
+#productSummary {
+    width:700px;
+    clear:both;
+    position:relative;
+    top:-25px;
+    font-family:Lucida Sans Unicode;
+}
+
+#headerPadder {
+	height:52px
+}
+
+.center {
+  margin-left: auto ;
+  margin-right: auto ;
+}
+
+#errorLayout {
+	width:485px;
+	padding-top:50
+}
+
+#regLayout {
+	padding-left:250px
+}
+
+#forgotForm {
+	padding-top: 20px;
+}
+
+#forgotNote {
+	padding-top: 30px;
+}
+
+.bold {
+	font-weight: bold
+}
+
+.headerPad {
+	padding-left:87px
+}
+
+#headerHL {
+	color:7aff00;
+}
+
+#optionSpacer {
+ 	width: 434px;
+ 	display: inline-block
+ }
+ 
+ #actionButtonSelect {
+	width:94px;
+	height:36px;
+	float:left
+ }
+
+#actionButtonCompare {
+	width:94;
+	height:36px
+ }
+
+#actionButtonATF {
+	width:140px;
+	height:36px 
+ }
+
+#actionButtonDelete {
+	width:77px;
+	height:36px 
+ }
+
+#actionButtonRFF {
+	width:183px;
+	height:36px
+ }
+
+#actionButtonDC {
+	width:131px;
+	height:36px
+ }
+ 

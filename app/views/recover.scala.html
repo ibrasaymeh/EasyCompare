@@ -1,0 +1,41 @@
+@(errorMsg : String)(successMsg : String)
+
+<html>
+<head>
+    <title>Recover Password</title>
+    <link rel="shortcut icon" type="image/png" href="../assets/images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="../assets/stylesheets/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="../assets/stylesheets/login.css">
+<style type="text/css">
+body {
+text-align: center;
+}
+</style>
+</head>
+
+
+<body>
+
+    @if(errorMsg || successMsg) {
+        <div class="bold" id="recoveryMsg">
+        @if(errorMsg) {
+                @errorMsg
+        }
+        @if(successMsg) {
+                @successMsg
+        }
+        </div>
+    } 
+    @if(!successMsg) {
+        <div id="forgotNote">To recover your password, enter the email address that was used to create your account.</div>
+        
+        <form action="/recoverPassword" method="POST">
+                <div id="forgotForm">
+                    <input name="email" type="text" autocomplete="off" placeholder="Your Email" class="inputField">&nbsp;&nbsp;&nbsp;
+                    <input value="Recover Password" type="submit" id="recoverPassword">
+                </div>
+        </form>
+    }
+
+</body>
+</html>

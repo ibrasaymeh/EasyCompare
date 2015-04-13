@@ -1,0 +1,18 @@
+@(i: Int, map: HashMap[String, String])
+    <div class="link-container" >
+        <a href="#" style="cursor:default" id="itemAnchor">
+            <span id="checkboxPad">
+	            <input type="checkbox" id="@i" class="css-checkbox" name="checkBox[@i]" value="@(map.get("_id"))"><label for="@i" class="css-label"></label>
+            </span>
+            <img id="itemSmallImage" src="assets/images/item_images/original/@(map.get("_id")).PNG">
+            <span id="couponDetails">
+                <span class="itemInfo" id="storeName">@map.get("Store Name")</span>                
+                <span class="itemInfo" id="itemName">@map.get("Name")</span>
+                <span class="itemInfo" id="couponRestrictions">@map.get("Restrictions") Coupon Code: @map.get("Code")</span>                
+            </span>
+            <span id="couponExpire">
+                <span class="itemInfo" id="couponExpiry">Expires</span>
+                <span class="itemInfo bold">@map.get("Expires")</span>
+            </span>
+        </a>
+    </div>

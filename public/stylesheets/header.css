@@ -1,0 +1,56 @@
+html {
+    overflow-y: scroll;
+}
+
+@charset "UTF-8";
+@font-face {
+    font-family: 'entypo';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/entypo.eot') format('eot'), 
+        url('../fonts/entypo.ttf') format('truetype'), 
+        url('../fonts/entypo.svg') format('svg');
+}
+
+.largeEntypo-list:before{content:"\e005"}
+.entypo-star:before{content:"\2605"}
+.entypo-tag:before{content:"\e70c"}
+.entypo-cog:before{content:"\2699"}
+.entypo-logout:before{content:"\e741"}
+
+[class*="entypo-"]:before {
+    font-family: 'entypo', sans-serif;
+    font-size: 25px;
+}
+
+[class*="largeEntypo-"]:before {
+    font-family: 'entypo', sans-serif;
+    font-size: 30px;
+}
+
+font {font-size:17px;}
+
+.largeEntypo-list {
+	position:relative;
+	top:3px
+}
+
+#initialDiv {
+    background-color:#007aff;
+    width:auto;
+    top: 0;
+    height:44px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin:0 auto;
+    padding-top:6px;
+    font-family:arial;
+    font-weight: bold;
+    z-index: 5;
+}
+
+a.header:link {color:#ffffff;text-decoration:none;}
+a.header:visited {color:#ffffff;text-decoration:none;}
+a.header:hover {color:#c9ff99;text-decoration:none;}
+a.header:active {color:#c9ff99;text-decoration:none;}

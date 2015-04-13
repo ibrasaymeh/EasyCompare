@@ -1,0 +1,61 @@
+@(list: ArrayList[HashMap[String, String]])
+
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../assets/stylesheets/header.css">
+	<link rel="stylesheet" type="text/css" href="../assets/stylesheets/stylesheet.css">
+        <style type="text/css">
+
+        tr:hover {
+            background:#ebebeb; 
+        }
+
+    </style>
+
+    <title>Product Comparison</title>
+    <link rel="shortcut icon" type="image/png" href="../assets/images/favicon.png">
+</head>
+
+<body bgcolor=f8f8f8>
+@header("")
+    
+    <center>
+        <div style="height:30px"></div>
+        <table border=1 bordercolor="ffffff" cellpadding=15 style="clear:both;border-spacing:0px;font-family:Helvetica" rules=all frame=void bgcolor=white>
+            @for((key, value) <- list.get(0)){
+                @for(i <- 0 until list.size){
+                    @if(!key.equals("Summary")) {
+                        @if(i==0){
+                            <tr>
+                            @if(key.equals("_id")){
+                                <td width=135 bgcolor=f8f8f8>
+                            } else{
+                                <td width=135 bgcolor=81b5eb><b><font color=292929>@key</font></b>
+                            }
+                                </td>
+                        }
+                        @if(key.equals("_id")) {
+                            <td width=240 bgcolor=white>
+                                <a target="_blank" href="description/@(list.get(i).get("_id"))" style="color:blue;text-decoration: none">
+                                    <img align=center width=230 src="assets/images/item_images/original/@(list.get(i).get("_id")).PNG">
+                                    <div style="padding-bottom:8px">
+                                        <center><u><b>View Product Page</b></u>&nbsp;
+                                        <img src="assets/images/openlink.png"></center>
+                                    </div>
+                                </a>
+                        } else{
+                            <td width=240>
+                                @if(key.equals("Price")) {
+                                    $}@list.get(i).get(key)
+                        }
+                            </td>
+                            @if(i==(list.size-1)){
+                                </tr>
+                            }
+                    }
+                }
+            }
+        </table>
+    </center>
+</body>
+</html>
